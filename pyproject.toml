@@ -1,0 +1,11 @@
+[project]
+name = "arsenamics"
+dynamic = ["version"]
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "mkdocs-awesome-nav>=3.1.1",
+    "mkdocs-git-committers-plugin-2>=2.5.0",
+    "mkdocs-material>=9.6.12",
+]
