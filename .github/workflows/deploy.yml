@@ -34,4 +34,7 @@ jobs:
       - name: install project
         run: uv sync --locked --all-extras
 
-      - run: uv run mkdocs gh-deploy --force
+      - name: Deploy MkDocs
+        env:
+          MKDOCS_GIT_COMMITTERS_APIKEY: ${{ secrets.GITHUB_TOKEN }}
+        run: uv run mkdocs gh-deploy --force

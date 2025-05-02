@@ -39,3 +39,4 @@ plugins:
       enabled: !ENV [CI, false]
       repository: wangzcl/arsenamics
       branch: main
+      token: !ENV MKDOCS_GIT_COMMITTERS_APIKEY
