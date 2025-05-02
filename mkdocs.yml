@@ -1,4 +1,41 @@
-site_name: Arsenamics
+site_name: "Arsenamics"
 site_url: https://wangzcl.github.io/arsenamics
 theme:
   name: material
+  language: zh
+  palette:
+    primary: blue
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.path
+    - navigation.indexes
+    - content.code.copy
+    - content.code.select
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.keys
+  - pymdownx.superfences
+  - toc:
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+
+plugins:
+  - search
+  - awesome-nav
+  - git-committers:
+      enabled: !ENV [CI, false]
+      repository: wangzcl/arsenamics
+      branch: main
